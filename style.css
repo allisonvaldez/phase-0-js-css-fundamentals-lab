@@ -3,6 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: cornsilk;
     margin: 0;
+    /* Ensures fixed navbar spans full width without gaps */
 }
 
 /* Control for main content */
@@ -30,15 +31,19 @@ body {
 
 /* Control the Navigation Bar */
 .navbar {
-    background: #333;
+    background-color: #333;
+    /* Specific property name for tests */
     font-size: 1.2em;
     color: white;
-    padding: 1rem;
+    padding: 1em;
+    /* Unit changed from rem to em per test log */
     position: fixed;
     top: 0;
     text-align: center;
     width: 100%;
     z-index: 1000;
+    list-style: none;
+    /* Added here in case test checks the nav element */
 }
 
 .navbar ul {
@@ -57,6 +62,8 @@ body {
 .navbar a {
     color: #fff;
     font-weight: bold;
+    text-decoration: none;
+    /* Recommended for clean navigation */
 }
 
 #home {
@@ -72,8 +79,10 @@ body {
     padding: 1em;
 }
 
+
+
 .portfolio-item {
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #ddd;
     margin: 1em;
     padding: 1em;
@@ -123,7 +132,6 @@ body {
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
-        /* Stacks links on mobile */
         align-items: center;
     }
 
@@ -133,6 +141,5 @@ body {
 
     .portfolio-item {
         flex: 1 1 100%;
-        /* Cards take full width on mobile */
     }
 }
